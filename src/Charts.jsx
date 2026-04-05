@@ -1,11 +1,9 @@
 import { useTransaction } from "./Transactionprovider";
-import { prepareChartData } from "./Preparechartdata";
+import  Preparechartdata from "./Preparechartdata";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 function Charts() {
-  const { transactions } = useTransaction();
-  const data = prepareChartData(transactions);
-
+  const data = Preparechartdata();
   if (data.length === 0) {
     return (
       <div className="h-64 flex items-center justify-center border-2 border-dashed rounded-xl">

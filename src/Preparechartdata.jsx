@@ -1,8 +1,8 @@
-import useTransaction from "./Transactionprovider";
+import {useTransaction} from "./Transactionprovider";
 const Preparechartdata=()=>{
     const{transactions}=useTransaction();
             const map={};
-    {transactions.filter((t)=>t.expense).foreach((t)=>{
+    {transactions.filter((t)=>t.expense).forEach((t)=>{
         if(!map[t.date])
         {
             map[t.date]=0;

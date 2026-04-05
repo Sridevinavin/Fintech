@@ -4,6 +4,7 @@ import Navbar from "./Navbar.jsx";
 import Transactionsection from "./Transactionsection.jsx";
 import TransactionForm from "./TransactionForm";
 import {Transactionprovider} from "./Transactionprovider.jsx";
+import Preparechartdata from "./Preparechartdata";
 
 function App() {
 const[role,setRole]=useState("Admin")
