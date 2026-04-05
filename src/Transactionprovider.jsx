@@ -1,9 +1,9 @@
 import { useState,createContext,useContext } from "react";
 import {initialTransactions} from "./Transactiondata.jsx";
 
+ const Transactioncontext=createContext();
 export const Transactionprovider=({children})=>{
     const[transactions,setTransactions]=useState(initialTransactions);
-     const Transactioncontext=createContext();
 function handleDelete(id)
 {
   const confirmed=window.confirm("Delete this transaction")
@@ -15,7 +15,6 @@ function handleAddTransaction(values)
 
   const newEntry={...values};
   setTransactions([newEntry,...transactions]);
-  setForm(false);
 }
 return(
     <div>
@@ -26,5 +25,5 @@ return(
 )
 };
 export const useTransaction=()=>{
-    useContext(Transactioncontext)
+    return useContext(Transactioncontext)
 }

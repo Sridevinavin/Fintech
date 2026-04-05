@@ -1,7 +1,7 @@
 import {useTransaction} from "./Transactionprovider";
 function Transactionsection({currole,showForm})
 {
-    const{transactions,handleDelete}=useTransaction(Transactioncontext);
+    const{transactions,handleDelete}=useTransaction();
     return(
         <div>
              <div className="m-4 flex justify-between">
