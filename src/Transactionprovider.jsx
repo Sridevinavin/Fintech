@@ -12,7 +12,6 @@ function handleDelete(id)
 }
 function handleAddTransaction(values)
 {
-
   const newEntry={...values};
   setTransactions([newEntry,...transactions]);
 }
