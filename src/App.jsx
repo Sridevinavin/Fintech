@@ -4,7 +4,7 @@ import Navbar from "./Navbar.jsx";
 import Transactionsection from "./Transactionsection.jsx";
 import TransactionForm from "./TransactionForm";
 import {Transactionprovider} from "./Transactionprovider.jsx";
-import Preparechartdata from "./Preparechartdata";
+import CategoryPieChart from "./CategoryPieChart"
 
 function App() {
 const[role,setRole]=useState("Admin")
@@ -23,7 +23,10 @@ function handleForm()
       <Transactionprovider>
           <Navbar role={role} onRolechange={onRolechange}/>
           <Transactionsection currole={role} showForm={handleForm} />
-          <Charts/>
+          <div className="flex ">
+            <Charts/>
+            <CategoryPieChart/>
+          </div>
           {form && <TransactionForm onCancel={()=>setForm(false)}/>}
       </Transactionprovider>
     </div>

@@ -3,7 +3,8 @@ import  Preparechartdata from "./Preparechartdata";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 function Charts() {
-  const data = Preparechartdata();
+    const{transactions}=useTransaction();
+  const data = Preparechartdata(transactions);
   if (data.length === 0) {
     return (
       <div className="h-64 flex items-center justify-center border-2 border-dashed rounded-xl">
@@ -13,7 +14,7 @@ function Charts() {
   }
 
   return (
-    <div className="p-4 bg-white rounded-xl shadow-sm border mt-6">
+    <div className="p-4 bg-white rounded-xl shadow-sm border my-6 m-4 w-full md:w-[60%]">
       <h3 className="text-lg font-bold mb-4">Spending Over Time</h3>
       <div className="h-64">
         <ResponsiveContainer width="100%" height="100%">
