@@ -4,7 +4,7 @@ import Navbar from "./Navbar.jsx";
 import Transactionsection from "./Transactionsection.jsx";
 import TransactionForm from "./TransactionForm";
 import {Transactionprovider} from "./Transactionprovider.jsx";
-import CategoryPieChart from "./CategoryPieChart"
+import CategoryPieChart from "./CategoryPieChart.jsx"
 
 function App() {
 const[role,setRole]=useState("Admin")
