@@ -1,18 +1,32 @@
-# React + Vite
+# 💰 Fintech - Personal Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A robust, responsive Personal Finance Tracker built with **React**, **Tailwind CSS**, and **Formik**. This application empowers users to monitor their financial health through interactive visualizations and a managed transaction system.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
+[View Live Project](https://sridevinavin.github.io/Fintech/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key Features
+- **Interactive Dashboard:** Real-time summary cards (Income, Expense, Balance) and visual trends using **Recharts**.
+- **Transaction Management:** Full CRUD operations with **Formik** & **Yup** for data validation.
+- **Smart Filtering:** Search and sort functionality to navigate large datasets (50+ records).
+- **Dynamic Insights:** Automated financial observations including highest spending categories and savings rates.
+- **Role-Based Access (RBAC):** - **Admin:** Full control (Add/Edit/Delete).
+  - **Viewer:** Read-only access to maintain data integrity.
+- **Dark Mode Support:** A sleek dark theme implemented via **React Context API** and Tailwind variants.
+- **Fully Responsive:** Seamless experience across Mobile (Slide-out Sidebar) and Desktop.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Library:** React.js (Hooks & Context API)
+- **Styling:** Tailwind CSS (Utility-first approach)
+- **Form Handling:** Formik & Yup
+- **Charts:** Recharts (Area & Pie charts)
+- **Icons:** Lucide-React
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+```text
+src/
+ ├── components/       # UI Components (Charts, Table, Sidebar)
+ ├── Transactionprovider.jsx # Global State Management (Theme & Data)
+ ├── Transactiondata.js      # Mock datasets (50+ transactions)
+ ├── Preparechartdata.js     # Data transformation logic for Recharts
+ └── App.jsx                 # Main Routing and Layout
