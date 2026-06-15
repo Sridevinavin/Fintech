@@ -5,7 +5,10 @@ import {useEffect} from "react";
  const Transactioncontext=createContext();
 export const Transactionprovider=({children})=>{
     const[transactions,setTransactions]=useState(initialTransactions);
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(() => {
+      const saved = localStorage.getItem('darkMode');
+      return saved !== null ? JSON.parse(saved) : true;
+    });
     useEffect(() => {
       const root = window.document.documentElement;
     if (darkMode) {
@@ -13,8 +16,15 @@ export const Transactionprovider=({children})=>{
     } else {
       root.classList.remove('dark');
     }
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
   const toggleTheme = () => setDarkMode(!darkMode);
+function handleUpdateTransaction(id,updatedData)
+{
+  setTransactions((prev)=>
+    prev.map((t)=>t.id==id?{...t,...updatedData}:t)
+  )
+}
 function handleDelete(id)
 {
   const confirmed=window.confirm("Delete this transaction")
@@ -35,11 +45,9 @@ const totals = transactions.reduce((acc, t) => {
 
 const balance = totals.income - totals.expense;
 return(
-    <div>
-        <Transactioncontext.Provider value={{transactions,handleAddTransaction,handleDelete,totals,balance,darkMode,toggleTheme}}>
+    <Transactioncontext.Provider value={{transactions,handleAddTransaction,handleUpdateTransaction,handleDelete,totals,balance,darkMode,toggleTheme}}>
         {children}
     </Transactioncontext.Provider>
-    </div>
 )
 };
 export const useTransaction=()=>{

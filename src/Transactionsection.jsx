@@ -109,7 +109,7 @@ function Transactionsection({ currole, showForm,onEdit }) {
                 {currole === "Admin" && (
                   <td className="px-6 py-4 text-center">
                     <div className="flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <button onClick={onEdit} className="p-1.5 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-md">Edit</button>
+                      <button onClick={()=>onEdit(t)} className="p-1.5 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-md">Edit</button>
                       <button 
                         onClick={() => handleDelete(t.id)}
                         className="p-1.5 text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20 rounded-md"
