@@ -4,14 +4,14 @@ import {categories} from "./Transactiondata";
 import {useTransaction} from "./Transactionprovider"
 function TransactionForm({onCancel})
 {
-    const {handleAddTransaction}=useTransaction(Transactioncontext);
+    const {handleAddTransaction}=useTransaction();
     const validationSchema=Yup.object({
         date:Yup.date().required("Date is requried"),
         amount:Yup.number().positive("Amount must be in positive").required("Amount is required"),
         description:Yup.string().required("Description is required"),
     });
     return(
-        <div>
+        <div className="fixed inset-0 z-60 flex items-center justify-center">
             <Formik
             initialValues={{
                 date:new Date().toISOString().split("T")[0],
@@ -24,6 +24,7 @@ function TransactionForm({onCancel})
             onSubmit={(values,{resetForm})=>{
                 handleAddTransaction({...values,id:Date.now(),amount:Number(values.amount)});
                 resetForm();
+                onCancel();
             }}>
                 <Form className="mx-auto max-w-xl border rounded-xl bg-white shadow-lg p-6 mt-4 absolute top-1/6 right-1/3">
                     <div className="grid grid-cols-1 gap-4">

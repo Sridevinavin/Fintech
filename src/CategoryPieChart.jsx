@@ -12,7 +12,7 @@ const CategoryPieChart = () => {
   }
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow-sm border h-100 md:w-[40%]">
+    <div className="bg-white h-100">
       <h3 className="text-lg font-bold mb-4 text-gray-800">Spending by Category</h3>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>

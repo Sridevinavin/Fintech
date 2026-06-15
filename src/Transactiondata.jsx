@@ -1,95 +1,59 @@
-export const initialTransactions=[{
-    id: 1,
-    date: "2026-03-01",
-    amount: 50000,
-    category: "Salary",
-    type: "income",
-    description: "Monthly Paycheck"
-  },
-  {
-    id: 2,
-    date: "2026-03-02",
-    amount: 50,
-    category: "Food",
-    type: "expense",
-    description: "Grocery Store"
-  },
-  {
-    id: 3,
-    date: "2026-03-05",
-    amount: 120,
-    category: "Entertainment",
-    type: "expense",
-    description: "Movie Night"
-  },
-  {
-    id: 4,
-    date: "2026-03-10",
-    amount: 1000,
-    category: "Rent",
-    type: "expense",
-    description: "March Rent"
-  },
-  {
-    id: 5,
-    date: "2026-03-12",
-    amount: 200,
-    category: "Gift",
-    type: "income",
-    description: "Gift from aunt"
-  },
-    {
-    id: 6,
-    date: "2026-03-14",
-    amount: 400,
-    category: "House Maintenance",
-    type: "expense",
-    description: "Washing Machine repair"
-  },
-    {
-    id: 7,
-    date: "2026-03-16",
-    amount: 50,
-    category: "Food",
-    type: "expense",
-    description: "Buying vegetables"
-  },
-    {
-    id: 8,
-    date: "2026-03-18",
-    amount: 1000,
-    category: "Gift",
-    type: "income",
-    description: "Govt gift"
-  },
-    {
-    id: 9,
-    date: "2026-03-20",
-    amount: 20,
-    category: "Food",
-    type: "expense",
-    description: "Snack"
-  },  {
-    id: 10,
-    date: "2026-03-21",
-    amount: 150,
-    category: "Food",
-    type: "expense",
-    description: "Buying vegetables"
-  },  {
-    id: 11,
-    date: "2024-03-26",
-    amount: 200,
-    category: "Travel",
-    type: "expense",
-    description: "Went to beach"
-  },  {
-    id: 12,
-    date: "2024-03-30",
-    amount: 200,
-    category: "Travel",
-    type: "expense",
-    description: "went to Triplicane"
-  }, 
-]
-export const categories=["Travel","Food","Gift","House Maintenance","Rent","Entertainment","Salary"];
+export const categories = ["Travel", "Food", "Gift", "House Maintenance", "Rent", "Entertainment", "Salary", "Utilities", "Health", "Shopping"];
+
+export const initialTransactions = [
+  { id: 1, date: "2026-03-01", amount: 50000, category: "Salary", type: "income", description: "Monthly Paycheck" },
+  { id: 2, date: "2026-03-02", amount: 50, category: "Food", type: "expense", description: "Grocery Store" },
+  { id: 3, date: "2026-03-05", amount: 120, category: "Entertainment", type: "expense", description: "Movie Night" },
+  { id: 4, date: "2026-03-10", amount: 1000, category: "Rent", type: "expense", description: "March Rent" },
+  { id: 5, date: "2026-03-12", amount: 200, category: "Gift", type: "income", description: "Gift from aunt" },
+  { id: 6, date: "2026-03-14", amount: 400, category: "House Maintenance", type: "expense", description: "Washing Machine repair" },
+  { id: 7, date: "2026-03-16", amount: 50, category: "Food", type: "expense", description: "Buying vegetables" },
+  { id: 8, date: "2026-03-18", amount: 1000, category: "Gift", type: "income", description: "Govt gift" },
+  { id: 9, date: "2026-03-20", amount: 20, category: "Food", type: "expense", description: "Snack" },
+  { id: 10, date: "2026-03-21", amount: 150, category: "Food", type: "expense", description: "Buying vegetables" },
+  { id: 11, date: "2026-03-26", amount: 200, category: "Travel", type: "expense", description: "Went to beach" },
+  { id: 12, date: "2026-03-30", amount: 200, category: "Travel", type: "expense", description: "went to Triplicane" },
+
+
+  { id: 13, date: "2026-01-01", amount: 48000, category: "Salary", type: "income", description: "Jan Salary" },
+  { id: 14, date: "2026-01-02", amount: 1000, category: "Rent", type: "expense", description: "Jan Rent" },
+  { id: 15, date: "2026-01-05", amount: 500, category: "Utilities", type: "expense", description: "Electricity Bill" },
+  { id: 16, date: "2026-01-08", amount: 1200, category: "Shopping", type: "expense", description: "New Year Clothes" },
+  { id: 17, date: "2026-01-12", amount: 300, category: "Food", type: "expense", description: "Dinner out" },
+  { id: 18, date: "2026-01-15", amount: 2000, category: "Gift", type: "income", description: "Birthday Bonus" },
+  { id: 19, date: "2026-01-20", amount: 150, category: "Travel", type: "expense", description: "Uber ride" },
+  { id: 20, date: "2026-01-25", amount: 600, category: "Health", type: "expense", description: "Pharmacy" },
+
+  { id: 21, date: "2026-02-01", amount: 50000, category: "Salary", type: "income", description: "Feb Salary" },
+  { id: 22, date: "2026-02-03", amount: 1000, category: "Rent", type: "expense", description: "Feb Rent" },
+  { id: 23, date: "2026-02-05", amount: 450, category: "Utilities", type: "expense", description: "Water Bill" },
+  { id: 24, date: "2026-02-10", amount: 2500, category: "Travel", type: "expense", description: "Weekend Trip" },
+  { id: 25, date: "2026-02-14", amount: 800, category: "Entertainment", type: "expense", description: "Valentine Dinner" },
+  { id: 26, date: "2026-02-18", amount: 120, category: "Food", type: "expense", description: "Lunch" },
+  { id: 27, date: "2026-02-22", amount: 1500, category: "Shopping", type: "expense", description: "Electronic Gadget" },
+  { id: 28, date: "2026-02-28", amount: 300, category: "House Maintenance", type: "expense", description: "Plumbing check" },
+
+  { id: 29, date: "2026-03-03", amount: 250, category: "Health", type: "expense", description: "Eye checkup" },
+  { id: 30, date: "2026-03-04", amount: 55, category: "Food", type: "expense", description: "Coffee" },
+  { id: 31, date: "2026-03-07", amount: 2000, category: "Shopping", type: "expense", description: "Home Decor" },
+  { id: 32, date: "2026-03-08", amount: 400, category: "Utilities", type: "expense", description: "Mobile Recharge" },
+  { id: 33, date: "2026-03-11", amount: 150, category: "Travel", type: "expense", description: "Bus pass" },
+  { id: 34, date: "2026-03-13", amount: 80, category: "Food", type: "expense", description: "Evening Snacks" },
+  { id: 35, date: "2026-03-15", amount: 1200, category: "Entertainment", type: "expense", description: "Concert Ticket" },
+  { id: 36, date: "2026-03-17", amount: 45, category: "Food", type: "expense", description: "Breakfast" },
+  { id: 37, date: "2026-03-19", amount: 600, category: "Travel", type: "expense", description: "Fuel" },
+  { id: 38, date: "2026-03-22", amount: 900, category: "Health", type: "expense", description: "Gym Membership" },
+  { id: 39, date: "2026-03-23", amount: 110, category: "Food", type: "expense", description: "Lunch" },
+  { id: 40, date: "2026-03-24", amount: 2000, category: "Gift", type: "income", description: "Cash Gift" },
+  { id: 41, date: "2026-03-25", amount: 75, category: "Food", type: "expense", description: "Snacks" },
+  { id: 42, date: "2026-03-27", amount: 1300, category: "Shopping", type: "expense", description: "Shoes" },
+  { id: 43, date: "2026-03-28", amount: 300, category: "Entertainment", type: "expense", description: "Streaming Subscription" },
+  { id: 44, date: "2026-03-29", amount: 250, category: "Travel", type: "expense", description: "Auto fare" },
+  { id: 45, date: "2026-03-31", amount: 60, category: "Food", type: "expense", description: "Tea and Biscuits" },
+
+  { id: 46, date: "2026-04-01", amount: 52000, category: "Salary", type: "income", description: "April Salary + Bonus" },
+  { id: 47, date: "2026-04-02", amount: 1100, category: "Rent", type: "expense", description: "April Rent (Increased)" },
+  { id: 48, date: "2026-04-03", amount: 400, category: "Food", type: "expense", description: "Bulk Groceries" },
+  { id: 49, date: "2026-04-04", amount: 1500, category: "Health", type: "expense", description: "Health Insurance" },
+  { id: 50, date: "2026-04-05", amount: 200, category: "Travel", type: "expense", description: "Weekend drive" }
+];
